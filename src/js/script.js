@@ -15,6 +15,16 @@ window.onload = function () {
 
       // Write the code here
       // Create a new array named 'domains' and push all the domain permutations in it
+      const domains = [];
+      for (const pronoun of pronouns) {
+        for (const adjective of adjectives) {
+          for (const noun of nouns) {
+            for (const extension of extensions) {
+              domains.push(`${pronoun} ${adjective} ${noun} ${extension}`);
+            }
+          }
+        }
+      }
 
       // Display the results
       domains.forEach((domain) => {
